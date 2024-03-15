@@ -1,4 +1,3 @@
-import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import { AiOutlineClose } from "react-icons/ai";
 import { UserAuth } from "../context/AuthContext";
 import { db } from "../services/firebase";

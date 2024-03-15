@@ -2,7 +2,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import MovieItem from "./MovieItem";
-import { MdChevronLeft } from "react-icons/md";
 
 const MovieRow = ({ title, url }) => {
   const [movies, setMovie] = useState([]);
@@ -17,9 +16,9 @@ const MovieRow = ({ title, url }) => {
 
   return (
     <>
-      <h1 className=" capitalize p-2 font-nsans-bold text-3xl text-center">{title}</h1>
+      <h1 className=" capitalize p-2 font-nsans-bold text-4xl ">{title}</h1>
      
-      <div id={`slider`} className=" flex items-center overflow-x-scroll scrollbar-hide  gap-2 bg-gray-500 w-full h-[200px]">
+      <div id={`slider`} className=" mx-auto flex flex-1 flex-wrap justify-center gap-x-2 gap-y-2 bg-black/20 bg-no-repeat bg-cover  w-full">
         {
             movies.map((movie)=>(
                 <MovieItem key={movie.id} movie={movie}/>

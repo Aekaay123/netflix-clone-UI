@@ -30,18 +30,17 @@ const MovieItem = ({ movie }) => {
 
   }
   return (
-    <div className="relative w-[160px] h-2/3 rounded-lg overflow-hidden cursor-pointer hover:scale-105 hover:opacity-100 duration-300">
+    <div className="relative w-[300px] h-[150px] mt-10 rounded-lg overflow-hidden cursor-pointer hover:scale-150  hover:opacity-100 duration-300">
       <img
         className="w-full h-full object-cover "
         src={imageURL(backdrop_path, "w500")}
         alt={title}
       ></img>
-      <div className="absolute top-0 left-0 w-full h-40 bg-black/40 opacity-0 hover:opacity-100">
-       
+      <div className=" top-0 left-0 w-full h-40 bg-black/40 opacity-0 hover:opacity-100">
         <p onClick={markFavShow} className="absolute top-1 left-1 cursor-pointer">
-         {like?<FaHeart size={20} className="absolute top-2 left-2 text-gray-500" />:<FaRegHeart size={20} className="top-2 left-2 text-gray-500" />}
+         {like?<FaHeart size={20} className="top-2 fixed left-2 text-blue-500" />:<FaRegHeart size={20} className="top-2 left-2 text-gray-500" />}
         </p>
-        <p className="mt-7 whitespace-normal text-sm font-nsans-bold flex items-center justify-center ">
+        <p className="whitespace-normal text-sm font-nsans-bold flex items-center mt-[25%] justify-center ">
           {title}
         </p>
       </div>
